@@ -13,8 +13,11 @@ public class GooglePO  extends BasePO {
     @FindBy(id = "result-stats")
     public WebElement divResultadoPesquisa;
 
-    @FindBy(name = "btnK")
+    @FindBy(css = "input.gNO89b")
     public WebElement botaoPesquisaGoogle;
+
+    @FindBy(name = "btnK")
+    public WebElement botaoEstouComSorte;
     /**
      * Construtor  para a criação da página do google.
      * @param driver -- Driver da página  do google.
@@ -38,13 +41,19 @@ public class GooglePO  extends BasePO {
      * Método que retorna o resultado aproximado da pesquisa.
      * @return retorna o resultado da pesquisa.
      */
-    public String obterResultadoDaPesquisa(){
+    public String obterResultadoPesquisa(){
         return divResultadoPesquisa.getText();
     }
 
     public void clicarBotaoPesquisaGoogle(){
         botaoPesquisaGoogle.click();
     }
+
+    public void clicarBotaoEstouComSorte(){
+        botaoEstouComSorte.click();
+    }
+
+
 
     
 }
