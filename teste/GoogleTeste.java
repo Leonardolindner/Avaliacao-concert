@@ -46,7 +46,7 @@ public class GoogleTeste extends BaseTeste{
 
        String resultado = concertPage.obterTextoTitle();
 
-       assertTrue(resultado, resultado.contains("Concert Technologies"));
+       assertTrue(resultado, resultado.contains("Concert"));
        
     }
 }

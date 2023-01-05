@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class ConcertPO extends BasePO {
 
 
-    @FindBy(tagName = "title")
+    @FindBy(css = "head > title")
     public WebElement tagTitleConcert;
 
     protected ConcertPO(WebDriver driver) {

@@ -13,10 +13,10 @@ public class GooglePO  extends BasePO {
     @FindBy(id = "result-stats")
     public WebElement divResultadoPesquisa;
 
-    @FindBy(css = "input.gNO89b")
+    @FindBy(css = "body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input.gNO89b")
     public WebElement botaoPesquisaGoogle;
 
-    @FindBy(name = "btnK")
+    @FindBy(css = "body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input.RNmpXc")
     public WebElement botaoEstouComSorte;
     /**
      * Construtor  para a criação da página do google.
