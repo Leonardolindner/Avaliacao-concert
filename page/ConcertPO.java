@@ -10,7 +10,7 @@ public class ConcertPO extends BasePO {
     @FindBy(css = "head > title")
     public WebElement tagTitleConcert;
 
-    protected ConcertPO(WebDriver driver) {
+    public ConcertPO(WebDriver driver) {
         super(driver);
     }
     

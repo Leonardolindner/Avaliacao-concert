@@ -18,11 +18,12 @@ public class GoogleTeste extends BaseTeste{
     @BeforeClass
     public static void prepararTestes(){
         googlePage = new GooglePO(driver);
+        concertPage = new ConcertPO(driver);
     }
 
     @Test
     public void TC001_001_deveSerPossivelPesquisarNoGoogleOTextoConcertTechnologiesEPressionarEnter(){
-        googlePage.pesquisar("concert technologies");
+        googlePage.pesquisarEClickEnter("concert technologies");
 
        String resultado = googlePage.obterResultadoPesquisa();
 
@@ -40,13 +41,12 @@ public class GoogleTeste extends BaseTeste{
     }
 
     @Test
-    public void TC001_003devePesquisarNoGoogleOTextoConcertTechnologiesEClicarBotaoEstouComSorte(){
+    public void TC001_003devePesquisarNoGoogleOTextoConcertTechnologiesEClicarBotaoEstouComSorte() throws InterruptedException{
        googlePage.pesquisar("concert technologies");
        googlePage.clicarBotaoEstouComSorte();
 
        String resultado = concertPage.obterTextoTitle();
-
-       assertTrue(resultado, resultado.contains("Concert"));
        
+       assertTrue(resultado, resultado.contains("CONCERT")); 
     }
 }
